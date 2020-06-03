@@ -1,0 +1,56 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<groupId>com.github.tanisperez</groupId>
+	<artifactId>tcl</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	
+	<name>Tanis Common Library</name>
+	<description>Tanis Common Library</description>
+	
+	<properties>
+		<jdk.version>11</jdk.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		 
+		<!-- Dependencies -->
+		<junit-jupiter.version>5.6.2</junit-jupiter.version>
+		
+		<!-- Plugins -->
+		<maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
+	</properties>
+	
+	<dependencyManagement>
+		<dependencies>
+			<!-- JUnit Jupiter -->
+			<dependency>
+			    <groupId>org.junit.jupiter</groupId>
+			    <artifactId>junit-jupiter-api</artifactId>
+			    <version>${junit-jupiter.version}</version>
+			    <scope>test</scope>
+			</dependency>		
+		</dependencies>
+	</dependencyManagement>
+	
+	<build>
+	  	<plugins>
+	  		<!--  Maven Compiler Plugin -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${maven-compiler-plugin.version}</version>
+				<configuration>
+					<source>${jdk.version}</source>
+					<target>${jdk.version}</target>
+				</configuration>
+			</plugin>
+	  	</plugins>
+  	</build>
+	
+	<modules>
+		<module>core</module>
+	</modules>
+	
+</project>
