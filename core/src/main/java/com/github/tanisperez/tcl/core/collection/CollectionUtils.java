@@ -17,11 +17,11 @@ public final class CollectionUtils {
 	}
 
 	/**
-	 * Checks if a {@code Collection} is null or empty.
+	 * Check if a {@code Collection} is null or empty.
 	 *
 	 * @param <T>        The {@code Collection} generic type.
 	 * @param collection The {@code Collection} to check.
-	 * @return Returns true if the {@code Collection} is null or empty.
+	 * @return Return true if the {@code Collection} is null or empty.
 	 */
 	public static <T> boolean isEmpty(final Collection<T> collection) {
 		return (collection == null) || (collection.size() == 0);
