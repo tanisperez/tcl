@@ -1,4 +1,4 @@
-package com.github.tanisperez.tcl.converter;
+package com.github.tanisperez.tcl.core.converter;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -7,9 +7,15 @@ import java.util.List;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import com.github.tanisperez.tcl.core.converter.Converter;
-
-public class AbstractConverterTest {
+/**
+ * Test suite for the {@code AbstractConverter} and {@code Converter}.
+ *
+ * @author Estanislao Pérez Nartallo
+ *
+ * @version 0.0.1
+ * @since 0.0.1
+ */
+public final class AbstractConverterTest {
 
 	@Test
 	@DisplayName("Convert object")

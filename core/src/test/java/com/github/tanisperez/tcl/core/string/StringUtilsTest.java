@@ -1,4 +1,4 @@
-package com.github.tanisperez.tcl.string;
+package com.github.tanisperez.tcl.core.string;
 
 import static com.github.tanisperez.tcl.core.string.StringUtils.isBlank;
 import static com.github.tanisperez.tcl.core.string.StringUtils.isEmpty;
@@ -24,7 +24,7 @@ import org.junit.jupiter.api.Test;
  * @version 0.0.1
  * @since 0.0.1
  */
-public class StringUtilsTest {
+public final class StringUtilsTest {
 
 	@Test
 	@DisplayName("isEmpty()")
