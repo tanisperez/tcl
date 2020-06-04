@@ -14,6 +14,7 @@ final class StringToLongListConverter extends AbstractConverter<String, List<Lon
 		if (!StringUtils.isBlank(source)) {
 			final List<String> tokens = StringUtils.split(source, ",");
 			return tokens.stream()
+				.map(StringUtils::trim)
 				.filter(NumberUtils::isNumber)
 				.map(Long::valueOf)
 				.collect(Collectors.toList());

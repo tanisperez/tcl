@@ -19,6 +19,12 @@ public final class CollectionUtils {
 	/**
 	 * Check if a {@code Collection} is null or empty.
 	 *
+	 * <pre>
+	 * 	isEmpty(null) = true
+	 * 	isEmpty(List.of()) = true
+	 * 	isEmpty(List.of(1, 2, 3)) = false
+	 * </pre>
+	 *
 	 * @param <T>        The {@code Collection} generic type.
 	 * @param collection The {@code Collection} to check.
 	 * @return Return true if the {@code Collection} is null or empty.

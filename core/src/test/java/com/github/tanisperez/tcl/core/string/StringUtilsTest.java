@@ -17,7 +17,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 /**
- * Test suite for the {@code StringUtils}
+ * Test suite for the {@code StringUtils}.
  *
  * @author Estanislao Pérez Nartallo
  *
