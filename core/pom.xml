@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>com.github.tanisperez</groupId>
 		<artifactId>tcl</artifactId>
-		<version>0.0.1</version>
+		<version>${revision}</version>
 	</parent>
 	<groupId>com.github.tanisperez.tcl</groupId>
 	<artifactId>core</artifactId>
