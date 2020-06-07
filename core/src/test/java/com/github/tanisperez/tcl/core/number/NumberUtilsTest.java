@@ -14,7 +14,6 @@ import org.junit.jupiter.api.Test;
  *
  * @version 0.0.1
  * @since 0.0.1
- *
  */
 public final class NumberUtilsTest {
 
