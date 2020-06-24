@@ -1,7 +1,7 @@
 package com.github.tanisperez.tcl.core.converter;
 
-import java.util.Collection;
 import java.util.Collections;
+import java.util.List;
 import java.util.stream.Collectors;
 
 import com.github.tanisperez.tcl.core.collection.CollectionUtils;
@@ -13,6 +13,9 @@ import com.github.tanisperez.tcl.core.collection.CollectionUtils;
  *
  * @param <S> Source type.
  * @param <T> Target type.
+ *
+ * @version 0.0.3
+ * @since 0.0.1
  */
 public abstract class AbstractConverter<S, T> implements Converter<S, T> {
 
@@ -32,22 +35,22 @@ public abstract class AbstractConverter<S, T> implements Converter<S, T> {
 	}
 
 	/**
-	 * Convert a {@code Collection} of type {@code S} to {@code Collection} of type
+	 * Convert a {@code Collection} of type {@code S} to {@code List} of type
 	 * {@code T}.
 	 * <p>
 	 * This method tries to convert each element individually, discarting null
 	 * values.
 	 *
-	 * @param sources The {@code Collection} to be converted.
-	 * @return Return the {@code Collection} converted or empty list.
+	 * @param sources The {@code List} to be converted.
+	 * @return Return the {@code List} converted or empty list.
 	 */
 	@Override
-	public Collection<T> convert(final Collection<S> sources) {
+	public List<T> convert(final List<S> sources) {
 		if (!CollectionUtils.isEmpty(sources)) {
 			return sources.stream()
-				.map(source -> convert(source))
-				.filter(target -> target != null)
-				.collect(Collectors.toList());
+					.map(source -> convert(source))
+					.filter(target -> target != null)
+					.collect(Collectors.toList());
 		}
 		return Collections.emptyList();
 	}

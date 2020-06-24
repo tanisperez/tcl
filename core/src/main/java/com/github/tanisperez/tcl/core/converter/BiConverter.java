@@ -1,13 +1,13 @@
 package com.github.tanisperez.tcl.core.converter;
 
-import java.util.Collection;
+import java.util.List;
 
 /**
  * Interface to transform objects of type {@code S} to {@code T} and vice versa.
  *
  * @author Estanislao Pérez Nartallo
  *
- * @version 0.0.1
+ * @version 0.0.3
  * @since 0.0.1
  *
  * @param <L> Left type.
@@ -24,13 +24,12 @@ public interface BiConverter<L, R> {
 	L toLeft(final R right);
 
 	/**
-	 * Convert a {@code Collection} of type {@code R} to {@code Collection} of type
-	 * {@code L}.
+	 * Convert a {@code List} of type {@code R} to {@code List} of type {@code L}.
 	 *
-	 * @param rights The {@code Collection} of type {@code R} to be converted.
-	 * @return Return the {@code Collection} converted.
+	 * @param rights The {@code List} of type {@code R} to be converted.
+	 * @return Return the {@code List} converted.
 	 */
-	Collection<L> toLeft(final Collection<R> rights);
+	List<L> toLeft(final List<R> rights);
 
 	/**
 	 * Convert an object of type {@code L} to {@code R}.
@@ -41,12 +40,11 @@ public interface BiConverter<L, R> {
 	R toRight(final L left);
 
 	/**
-	 * Convert a {@code Collection} of type {@code L} to {@code Collection} of type
-	 * {@code R}.
+	 * Convert a {@code List} of type {@code L} to {@code List} of type {@code R}.
 	 *
-	 * @param lefts The {@code Collection} of type {@code L} to be converted.
-	 * @return Return the {@code Collection} converted.
+	 * @param lefts The {@code List} of type {@code L} to be converted.
+	 * @return Return the {@code List} converted.
 	 */
-	Collection<R> toRight(final Collection<L> lefts);
+	List<R> toRight(final List<L> lefts);
 
 }

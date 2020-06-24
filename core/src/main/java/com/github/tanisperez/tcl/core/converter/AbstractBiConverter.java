@@ -1,7 +1,7 @@
 package com.github.tanisperez.tcl.core.converter;
 
-import java.util.Collection;
 import java.util.Collections;
+import java.util.List;
 import java.util.stream.Collectors;
 
 import com.github.tanisperez.tcl.core.collection.CollectionUtils;
@@ -14,6 +14,9 @@ import com.github.tanisperez.tcl.core.collection.CollectionUtils;
  *
  * @param <L> Left type.
  * @param <R> Right type.
+ *
+ * @version 0.0.3
+ * @since 0.0.1
  */
 public abstract class AbstractBiConverter<L, R> implements BiConverter<L, R> {
 
@@ -32,22 +35,21 @@ public abstract class AbstractBiConverter<L, R> implements BiConverter<L, R> {
 	}
 
 	/**
-	 * Convert a {@code Collection} of type {@code R} to {@code Collection} of type
-	 * {@code L}.
+	 * Convert a {@code List} of type {@code R} to {@code List} of type {@code L}.
 	 * <p>
 	 * This method tries to convert each element individually, discarting null
 	 * values.
 	 *
-	 * @param rights The {@code Collection} of type {@code R} to be converted.
-	 * @return Return the {@code Collection} converted.
+	 * @param rights The {@code List} of type {@code R} to be converted.
+	 * @return Return the {@code List} converted.
 	 */
 	@Override
-	public Collection<L> toLeft(final Collection<R> rights) {
+	public List<L> toLeft(final List<R> rights) {
 		if (!CollectionUtils.isEmpty(rights)) {
 			return rights.stream()
-				.map(right -> toLeft(right))
-				.filter(left -> left != null)
-				.collect(Collectors.toList());
+					.map(right -> toLeft(right))
+					.filter(left -> left != null)
+					.collect(Collectors.toList());
 		}
 		return Collections.emptyList();
 	}
@@ -67,22 +69,21 @@ public abstract class AbstractBiConverter<L, R> implements BiConverter<L, R> {
 	}
 
 	/**
-	 * Convert a {@code Collection} of type {@code L} to {@code Collection} of type
-	 * {@code R}.
+	 * Convert a {@code List} of type {@code L} to {@code List} of type {@code R}.
 	 * <p>
 	 * This method tries to convert each element individually, discarting null
 	 * values.
 	 *
-	 * @param lefts The {@code Collection} of type {@code L} to be converted.
-	 * @return Return the {@code Collection} converted.
+	 * @param lefts The {@code List} of type {@code L} to be converted.
+	 * @return Return the {@code List} converted.
 	 */
 	@Override
-	public Collection<R> toRight(final Collection<L> lefts) {
+	public List<R> toRight(final List<L> lefts) {
 		if (!CollectionUtils.isEmpty(lefts)) {
 			return lefts.stream()
-				.map(left -> toRight(left))
-				.filter(right -> right != null)
-				.collect(Collectors.toList());
+					.map(left -> toRight(left))
+					.filter(right -> right != null)
+					.collect(Collectors.toList());
 		}
 		return Collections.emptyList();
 	}

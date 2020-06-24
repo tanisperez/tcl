@@ -1,13 +1,13 @@
 package com.github.tanisperez.tcl.core.converter;
 
-import java.util.Collection;
+import java.util.List;
 
 /**
  * Interface to transform objects of type {@code S} to {@code T}.
  *
  * @author Estanislao Pérez Nartallo
  *
- * @version 0.0.1
+ * @version 0.0.3
  * @since 0.0.1
  *
  * @param <S> Source type.
@@ -24,12 +24,11 @@ public interface Converter<S, T> {
 	T convert(final S source);
 
 	/**
-	 * Convert a {@code Collection} of type {@code S} to {@code Collection} of type
-	 * {@code T}.
+	 * Convert a {@code List} of type {@code S} to {@code List} of type {@code T}.
 	 *
-	 * @param sources The {@code Collection} to be converted.
-	 * @return Return the {@code Collection} converted.
+	 * @param sources The {@code List} to be converted.
+	 * @return Return the {@code List} converted.
 	 */
-	Collection<T> convert(final Collection<S> sources);
+	List<T> convert(final List<S> sources);
 
 }

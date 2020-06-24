@@ -17,11 +17,18 @@
 	
 	
 	<dependencies>
-		<!-- JUnit Jupiter -->
+		<!-- JUnit Jupiter API -->
 		<dependency>
 		    <groupId>org.junit.jupiter</groupId>
 		    <artifactId>junit-jupiter-api</artifactId>
 		    <scope>test</scope>
-		</dependency>		
+		</dependency>
+		
+		<!-- JUnit Jupiter Engine -->
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-engine</artifactId>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
 </project>

@@ -12,7 +12,7 @@
 	<description>Tanis Common Library</description>
 
 	<properties>
-		<revision>0.0.2</revision>
+		<revision>0.0.3</revision>
 		<jdk.version>11</jdk.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
@@ -26,10 +26,18 @@
 
 	<dependencyManagement>
 		<dependencies>
-			<!-- JUnit Jupiter -->
+			<!-- JUnit Jupiter API -->
 			<dependency>
 				<groupId>org.junit.jupiter</groupId>
 				<artifactId>junit-jupiter-api</artifactId>
+				<version>${junit-jupiter.version}</version>
+				<scope>test</scope>
+			</dependency>
+			
+			<!-- JUnit Jupiter Engine -->
+			<dependency>
+				<groupId>org.junit.jupiter</groupId>
+				<artifactId>junit-jupiter-engine</artifactId>
 				<version>${junit-jupiter.version}</version>
 				<scope>test</scope>
 			</dependency>
