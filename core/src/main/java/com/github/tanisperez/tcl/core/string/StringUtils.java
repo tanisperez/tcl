@@ -13,6 +13,9 @@ import java.util.List;
  */
 public final class StringUtils {
 
+	/** Empty String */
+	public static final String EMPTY = "";
+
 	private StringUtils() {
 		// DO Nothing.
 	}
